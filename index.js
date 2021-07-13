@@ -19,7 +19,7 @@ cityBird.carPark();
 
 cityBird.updateCarPrice(0, 22);
 
-// cityBird.carPark();
+cityBird.carPark();
 // 1. Toyota Yaris (black) is for 22EUR/day.
 // 2. Volvo S40 (red) is for 20EUR/day.
 // 3. Tesla 3 (white) is for 40EUR/day.

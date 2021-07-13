@@ -15,13 +15,13 @@ class CarRental {
         console.log(`Hi, we are ${this.companyName} and we have ${carsNumber} cars available.`);
     }
 
-
     addCar(name, color, price) {
-        let item = {
+        let carObject = {
             name, color, price,
-            working: true,
+            working: true
         }
-        this.list.push(item);
+        this.list.push(carObject);
+        console.log(carObject);
     }
 
     carPark() {
@@ -30,17 +30,20 @@ class CarRental {
             const car = this.list[i];
             if (car.working === true) {
                 carPosition++
-                console.log(`${carPosition}. ${car.name} (${car.color}) is for ${car.price}EUR/day`);
+                console.log(`${carPosition}. ${car.name} (${car.color}) is for ${car.price}EUR/day.`);
             }
         }
     }
 
-    updateCarPrice(index, NewPrice) {
-        this.list[index].price = NewPrice;
+    updateCarPrice(index, newPrice) {
+        this.list[index].price = newPrice;
+        // console.log(this.list);
     }
 
     carAccident(index) {
         this.list[index].working = false;
+        console.log(this.list);
+
     }
 
     carRepair(index) {
@@ -57,17 +60,7 @@ class CarRental {
         }
         this.list = newCarsList;
     }
-
-    updatedCarPrice(index, NewPrice) {
-        this.list[index].price = NewPrice;
-
-    }
-
 }
-
-
-
-
 
 module.exports = CarRental;
 
