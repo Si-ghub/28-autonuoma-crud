@@ -43,7 +43,6 @@ class CarRental {
     carAccident(index) {
         this.list[index].working = false;
         console.log(this.list);
-
     }
 
     carRepair(index) {
